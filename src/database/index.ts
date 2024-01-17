@@ -33,7 +33,7 @@ export const initializeDb = async (): Promise<KnexType> => {
   })
 
   Model.knex(knex)
-  knex.migrate.latest()
+  // knex.migrate.latest()
 
   logger.info('DB connection initialized')
 

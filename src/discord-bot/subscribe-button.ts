@@ -11,11 +11,11 @@ export const subscribe = async (msg: Message<boolean>) => {
   
   const user = await userRepository.findByDiscordId(msg.author.id);
   
-  if (user?.role !== "user") {
-    return msg.reply({
-      content: "Você não tem permissão para usar esse comando",
-    });
-  }
+  // if (user?.role !== "user") {
+  //   return msg.reply({
+  //     content: "Você não tem permissão para usar esse comando",
+  //   });
+  // }
 
   return msg.reply({
     content: "Clique no botão abaixo para se inscrever no desafio #300",

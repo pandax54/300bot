@@ -15,6 +15,14 @@ export interface Config {
     sensitiveParameters: string[]
   }
 
+  discord: {
+    clientId: string
+    clientSecret: string
+    aplicationId: string
+    port: number
+    redirectUri: string
+  }
+
   server: {
     port: number
   }

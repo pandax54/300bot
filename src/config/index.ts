@@ -29,6 +29,14 @@ const config: Config = {
     sensitiveParameters: ['password'],
   },
 
+  discord: {
+    clientId: getEnvironmentValue('PUBLIC_KEY', '123'),
+    clientSecret: getEnvironmentValue('CLIENT_TOKEN', '123'),
+    aplicationId: getEnvironmentValue('APPLICATION_ID', '123'),
+    port: Number(getEnvironmentValue('DISCORD_PORT', '3008')),
+    redirectUri: getEnvironmentValue('REDIRECT_URI', 'http://localhost:3008/connect'),
+  },
+
   server: {
     port: Number(getEnvironmentValue('PORT', '3008')),
   },
