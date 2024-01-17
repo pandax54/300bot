@@ -12,6 +12,6 @@ export const connect = compose([
     }
 
     const operationResult = await oauthConnect.execute(inputData)
-    ctx.noContent()
+    ctx.ok(operationResult)
   },
 ])
