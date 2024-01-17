@@ -1,0 +1,20 @@
+# DATABASE_URL=postgres://postgres:postgres@localhost:5438/postgres
+version: '3.7'
+
+services:
+  db:
+    container_name: 300bot
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: pg_isready -U postgres -h 127.0.0.1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    image: postgres:11.4-alpine
+    ports:
+      - 5438:5432
