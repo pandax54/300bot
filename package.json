@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/server.ts",
   "scripts": {
-    "start": "npm run build && node build/src/server.js",
+    "start": "npm run build && node build/server.js",
     "start:dev": "npx nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
     "start:bot": "npx nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/bot.ts",
     "db:migration": "NODE_ENV=local knex migrate:make --knexfile src/database/config.ts rename-me",

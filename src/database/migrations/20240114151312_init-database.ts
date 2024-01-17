@@ -29,7 +29,7 @@ export async function up(knex: Knex): Promise<void> {
       table.increments('id').primary()
       table.string('category').notNullable().defaultTo('strength')
       table.string('description')
-      table.string('user_id').notNullable().unsigned()
+      table.integer('user_id').notNullable().unsigned()
       table.foreign('user_id').references('users.id')
       .onDelete('restrict')
       .onUpdate('restrict')
