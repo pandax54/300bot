@@ -24,8 +24,8 @@ async function init() {
   app.use(v1Routes);
   app.use(router.allowedMethods());
 
-  app.listen(3008, () => {
-    console.log("server is running at http://localhost:3008");
+  app.listen(process.env.PORT, () => {
+    console.log(`server is running at ${process.env.URL ?? 'http://localhost'}:${process.env.PORT}`);
   });
 
   botInit()
