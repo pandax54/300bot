@@ -10,7 +10,7 @@
     "db:migration": "NODE_ENV=local knex migrate:make --knexfile src/database/config.ts rename-me",
     "db:migrate": "knex migrate:latest --knexfile src/database/config.ts",
     "db:rollback": "knex migrate:rollback --knexfile src/database/config.ts",
-    "buid": "rm -rf build && tsc",
+    "build": "rm -rf build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

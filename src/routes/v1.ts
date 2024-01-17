@@ -5,7 +5,7 @@ import * as controllers from '../controllers/v1'
 const router = new Router<{}, Context>()
 
 router.get("/", async (ctx) => {
-  ctx.body = "hello world";
+  ctx.body = "connected";
 });
 
 // --- OAuth ----------------
