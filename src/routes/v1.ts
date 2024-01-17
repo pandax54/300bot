@@ -10,7 +10,7 @@ router.get("/", async (ctx) => {
 
 // --- OAuth ----------------
 router.get('/oauth/discord/connect', controllers.oath.connect)
-router.post('/oauth/discord/connect', controllers.oath.connect)
+// router.post('/oauth/discord/connect', controllers.oath.connect)
 
 
 // --- Users ----------------

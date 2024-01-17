@@ -2,6 +2,7 @@ import compose from 'koa-compose'
 import type { Context } from 'koa'
 import type { Input as OauthConnectInput } from '../../operations/v1/oauth/connect'
 import { oauthConnect } from '../../operations/v1/oauth/connect'
+import { logger } from '../../utils/logger'
 
 export const connect = compose([
   async (ctx: Context): Promise<void> => {
@@ -12,6 +13,7 @@ export const connect = compose([
     }
 
     const operationResult = await oauthConnect.execute(inputData)
+    logger.info(operationResult)
     ctx.ok(operationResult)
   },
 ])
