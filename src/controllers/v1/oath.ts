@@ -6,6 +6,7 @@ import { logger } from '../../utils/logger'
 
 export const connect = compose([
   async (ctx: Context): Promise<void> => {
+    logger.info('ctx.request.query', ctx.request.query)
     const inputData: Partial<OauthConnectInput> = {
       code: ctx.request.query.code as string,
       permissions: ctx.request.query.permissions as string,
